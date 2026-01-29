@@ -38,7 +38,7 @@ for region in regions:
     save_json(f"{region}/clusters.json", clusters)
 
     for cluster_name in clusters:
-        print(f"  🔹 Cluster: {cluster_name}")
+        print(f"  Cluster: {cluster_name}")
 
         cluster = eks.describe_cluster(name=cluster_name)
         save_json(f"{region}/clusters/{cluster_name}.json", cluster)
